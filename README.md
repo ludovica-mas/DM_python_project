@@ -4,6 +4,7 @@
 
 ### Overview
 This project implements a sentiment analysis system based on the DistilRoBERTa model using the Hugging Face Transformers library. The program performs sentiment analysis of book reviews contained in the dataset and assigns an emotion to each book. With this model, you can classify emotions in English text data. The model was trained on 6 diverse datasets and predicts Ekman's 6 basic emotions, plus a neutral class:
+
 anger 🤬 disgust 🤢 fear 😨 joy 😀 neutral 😐 sadness 😭 surprise 😲
 ### Prerequisites
 Python 3
