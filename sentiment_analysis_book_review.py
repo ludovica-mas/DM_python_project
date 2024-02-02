@@ -40,16 +40,13 @@ def suggest_books():
     genre_input = input("To suggest the most suitable one for your desires, please indicate one of these literary genres: fiction, history, mystery and thriller, horror, fantasy, science fiction, romance, young adult, nonfiction, humor\n")
 
     # Ask for the desired emotion
-    emotion_input = input("To propose the suitable story, tell me what emotion you would like to feel while reading: anger, fear, joy, neutral, sadness, surprise.\n")
+    emotion_input = input("To propose the suitable story, tell me what emotion you would like to feel while reading: anger, fear, joy, neutral, disgust, sadness, surprise.\n")
 
-    # Apply preprocessing to user input
-    processed_genre_input = preprocess_text(genre_input)
-    processed_emotion_input = preprocess_text(emotion_input)
 
     # Filter the DataFrame based on user responses
-    filtered_df = df[((df['Genre'].apply(lambda x: processed_genre_input in preprocess_text(x))) |
-                      (df['Subgenre'].apply(lambda x: processed_genre_input in preprocess_text(x)))) &
-                     (df['Emotion'].apply(lambda x: processed_emotion_input in preprocess_text(x)))]
+    filtered_df = df[((df['Genre'].apply(lambda x: genre_input in x))) |
+                      (df['Subgenre'].apply(lambda x:genre_input in x)) &
+                     (df['Emotion'].apply(lambda x: emotion_input in x))]
 
     # Display the titles and authors of suggested books
     if not filtered_df.empty:
