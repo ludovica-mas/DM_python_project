@@ -21,10 +21,9 @@ def preprocess_text(text):
     return processed_text
 
 def filter_genre(genre_input, genres):
-    for token in word_tokenize(genre_input):
-        for genre in genres:
-            if re.search(r'\b' + re.escape(genre) + r'\b', token, flags=re.IGNORECASE):
-                return True
+    for genre in genres:
+        if re.search(r'\b' + re.escape(genre) + r'\b', genre_input, flags=re.IGNORECASE):
+            return genre.lower() == genre_input.lower()
     return False
 
 #Load your Excel sheet into a DataFrame
