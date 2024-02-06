@@ -1,6 +1,7 @@
 import pandas as pd
 from transformers import pipeline
 import nltk
+import re
 nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -18,6 +19,13 @@ def preprocess_text(text):
     filtered_words = [word for word in words if word.lower() not in stop_words]
     processed_text = ' '.join(filtered_words)
     return processed_text
+
+def filter_genre(genre_input, genres):
+    for token in word_tokenize(genre_input):
+        for genre in genres:
+            if re.search(r'\b' + re.escape(genre) + r'\b', token, flags=re.IGNORECASE):
+                return True
+    return False
 
 #Load your Excel sheet into a DataFrame
 df = pd.read_excel(r"C:\Users\990840\Desktop\database_libri_python.xlsx")
@@ -47,8 +55,8 @@ def suggest_books():
     processed_emotion_input = preprocess_text(emotion_input)
 
     # Filter the DataFrame based on user responses
-    filtered_df = df[((df['Genre'].apply(lambda x: processed_genre_input in preprocess_text(x))) |
-                      (df['Subgenre'].apply(lambda x: processed_genre_input in preprocess_text(x)))) &
+    filtered_df = df[((df['Genre'].apply(lambda x: filter_genre(processed_genre_input, [x]))) |
+                      (df['Subgenre'].apply(lambda x: filter_genre(processed_genre_input, [x])))) &
                      (df['Emotion'].apply(lambda x: processed_emotion_input in preprocess_text(x)))]
 
     # Display the titles and authors of suggested books
