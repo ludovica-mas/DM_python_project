@@ -1,7 +1,7 @@
 The authors of the project acknowledge the website “Goodreads”. It has been used to gather the books data and reviews for building the database.
 Regarding the authors' work, both M.C. and L.M. have contributed to develop the project by creating the database and writing the code to the same extent. 
 M.C. and L.M have come up with the project to reach their objectives. 
-The Python code has been written thanks to the Generative AI platform ChatGPT help, which has offered insights and solutions that significantly contributed to the initial stages. Additionally, the authors have acknowledged the modifications and refinements made post ChatGPT consultation. 
+The Python code has been written also thanks to the Generative AI platform ChatGPT help, which has offered insights and solutions that significantly contributed to the initial stages. Additionally, the authors have acknowledged the modifications and refinements made post ChatGPT consultation. 
 Thanks to the VS Code platform through which the model has been effectively tested with a comprehensive and intuitive development environment. 
 We would like to extend our sincere gratitude to J. Hartman for his contribution in the field of sentiment analysis through the model published on Hugging Face.
 All the team members worked along to upload the final version of the project to GitHub.
