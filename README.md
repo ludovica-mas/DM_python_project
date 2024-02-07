@@ -34,6 +34,6 @@ Book Recommendation System:
 Users interact with the system by selecting desired literary genres and emotional experiences they seek from reading.
 The system filters book data based on user preferences and suggests relevant books.
 Provides detailed book descriptions and purchase links.
-### Author
+### Authors
 Ludovica Mastrantuono, Michela Carriera
 
