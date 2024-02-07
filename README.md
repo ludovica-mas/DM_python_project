@@ -3,6 +3,8 @@
 ![pink panter](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGxuMzBwa2VoeGJnM2p6NGIzcXp6azNrMWM2Z2xmN29vOTh4dWZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZCmDhIFeF1s2c/giphy.gif)
 
 ### Overview
+This project is focused on developing a recommendation system designed to provide users with a curated list of books tailored to both their chosen literary genre and the specific emotional experience they seek while reading.
+
 This project implements a sentiment analysis system based on the DistilRoBERTa model using the Hugging Face Transformers library. The program performs sentiment analysis of book reviews contained in the dataset and assigns an emotion to each book. With this model, you can classify emotions in English text data. The model was trained on 6 diverse datasets and predicts Ekman's 6 basic emotions, plus a neutral class:
 
 anger 🤬 disgust 🤢 fear 😨 joy 😀 neutral 😐 sadness 😭 surprise 😲
