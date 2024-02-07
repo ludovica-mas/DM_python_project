@@ -9,6 +9,7 @@ anger 🤬 disgust 🤢 fear 😨 joy 😀 neutral 😐 sadness 😭 surprise �
 ### Prerequisites
 Python 3
 Required Python Libraries: pandas, transformers, nltk
+
 Optional Python Libraries: openpyxl (if there is an error reading the Excel file, this library may be necessary)
 ### Installation
 Clone the repository:
